@@ -1,0 +1,23 @@
+plugins {
+    id 'java'
+}
+
+group 'org.example'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.6.0'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine'
+
+    implementation group: 'org.glassfish.hk2', name: 'hk2-api', version: '3.0.1'
+    implementation group: 'org.glassfish.hk2', name: 'hk2-locator', version: '3.0.1'
+
+}
+
+test {
+    useJUnitPlatform()
+}
